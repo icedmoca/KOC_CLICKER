@@ -17,4 +17,3 @@ This is a simple install script for the instant clicker for the King of Clicks c
  * python3-pip
  * python3-selenium
  * chromedriver-py (whatever is stable)
- * [click.git](https://github.com/icedmoca/click)
