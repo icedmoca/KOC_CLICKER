@@ -14,3 +14,10 @@ apt-get update --fix-missing
 apt-get -y install software-properties-common
 add-apt-repository -y universe
 apt-get -y install virt-what curl
+apt install -y python3
+apt install -y python3-pip
+apt install -y python3-selenium
+pip3 install chromedriver-py
+git clone https://github.com/icedmoca/click.git
+cd click
+python3 1.py
