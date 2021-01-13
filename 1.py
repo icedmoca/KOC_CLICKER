@@ -1,6 +1,4 @@
-import concurrent.futures
-import logging
-import threading
+import multiprocessing
 import time
 from selenium import webdriver
 
@@ -11,7 +9,7 @@ def makeClickerInstance():
         chrome_options.add_argument('--headless')
         chrome_options.add_argument('--no-sandbox') # required when running as root user. otherwise you would get no sandbox errors.
         driver = webdriver.Chrome(options=chrome_options)
-        driver.get("https://kingoftheclicks.com/?ref=epicgamer")
+        driver.get("https://kingoftheclicks.com/?ref=zodicalpeak")
         time.sleep(3)
         start = driver.find_element_by_xpath('/html/body/div[1]/div/div/main/div[3]/div[2]/div/div/div/footer/button[1]/span')
         start.click()
@@ -27,16 +25,8 @@ def makeClickerInstance():
         print("Error Starting")
     driver.quit()
 
-def thread_function(name):
-    logging.info("Thread %s: starting", name)
-    makeClickerInstance()
-    logging.info("Thread %s: finishing", name)# [rest of code]
 
-
-if __name__ == "__main__":
-    format = "%(asctime)s: %(message)s"
-    logging.basicConfig(format=format, level=logging.INFO,
-                        datefmt="%H:%M:%S")
-
-    with concurrent.futures.ThreadPoolExecutor(max_workers=15) as executor:
-        executor.map(thread_function, range(15))
+if __name__ == '__main__':
+  for i in range(15):
+    p = multiprocessing.Process(target=makeClickerInstance)
+    p.start()
