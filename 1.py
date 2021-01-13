@@ -17,10 +17,6 @@ def makeClickerInstance():
         removeButt.click()
         time.sleep(0.01)
         x = x + 1
-        progress = 0
-        if (x % 1000) == 0:
-            progress = progress + 1000
-            print(progress + "CLICKS PREFORMED")
     driver.quit()
 
 while 1 == 1:
