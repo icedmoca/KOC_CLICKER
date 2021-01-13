@@ -9,5 +9,5 @@ This is a simple install script for the instant clicker for the King of Clicks c
 3. Give permissions: `chmod 777 install.sh`
 4. Run: `./install.sh`
 
-##To exit script
+## To exit script
 `CTRL-C` and make sure you end all python processes `sudo pkill python` make sure none are running `sudo pgrep python`
