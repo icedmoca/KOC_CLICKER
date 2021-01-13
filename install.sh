@@ -11,6 +11,7 @@ _  ___                      __    _____ _ _      _
 EOF
 
 apt-get update --fix-missing
+apt-get install google-chrome-stable
 apt install -y python3
 apt install -y python3-pip
 apt install -y python3-selenium
