@@ -13,8 +13,8 @@ This is a simple install script for the instant clicker for the King of Clicks c
 `CTRL-C` and end all python processes `sudo pkill python` make sure none are running `sudo pgrep python`
 
 ###### Dependencies installed
-###### * python3
-###### * python3-pip
-###### * python3-selenium
-###### * chromedriver-py (whatever is stable)
-###### * click.git
+ * python3
+ * python3-pip
+ * python3-selenium
+ * chromedriver-py (whatever is stable)
+ * click.git
