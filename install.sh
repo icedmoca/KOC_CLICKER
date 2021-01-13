@@ -8,6 +8,10 @@ _  ___                      __    _____ _ _      _
  |_|\_\_|_| |_|\__, |  \___/|_|    \_____|_|_|\___|_|\_\___/
                 __/ |                                       
                |___/                                         
+-------------------------------------------------------------
+-  See whats running:       ps -fA | grep python            -
+-  End all the tasks:       sudo pkill python               -
+-------------------------------------------------------------
 EOF
 
 apt-get update --fix-missing
@@ -21,4 +25,8 @@ pip3 install chromedriver-py
 cd /bin
 sudo chmod +x chromedriver
 cd ~/clickinstaller
-python3 1.py
+nohup python3 1.py
+sleep 5
+nohup python3 1.py
+sleep 5
+nohup python3 1.py
