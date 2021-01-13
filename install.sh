@@ -20,5 +20,6 @@ apt install -y python3-selenium
 pip3 install chromedriver-py
 cd /bin
 chmod +x chromedriver
+logout
 cd ~/clickinstaller
 python3 1.py
