@@ -13,10 +13,10 @@ EOF
 apt-get update --fix-missing
 sudo apt-get install -y libappindicator1 fonts-liberation
 sudo apt-get install -f
-apt-get install google-chrome-stable
-apt install -y python3
-apt install -y python3-pip
-apt install -y python3-selenium
+sudo apt-get install google-chrome-stable
+sudo apt install -y python3
+sudo apt install -y python3-pip
+sudo apt install -y python3-selenium
 pip3 install chromedriver-py
 cd /bin
 sudo chmod +x chromedriver
