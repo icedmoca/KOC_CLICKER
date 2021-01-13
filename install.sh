@@ -11,9 +11,6 @@ _  ___                      __    _____ _ _      _
 EOF
 
 apt-get update --fix-missing
-apt-get -y install software-properties-common
-add-apt-repository -y universe
-apt-get -y install virt-what curl
 apt install -y python3
 apt install -y python3-pip
 apt install -y python3-selenium
