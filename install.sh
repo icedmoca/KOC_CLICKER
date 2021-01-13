@@ -1,5 +1,5 @@
 #!/bin/bash
-bash -c 'cat > /etc/motd' <<-'EOF'
+sudo bash -c 'cat > /etc/motd' <<-'EOF'
 _  ___                      __    _____ _ _      _        
  | |/ (_)                    / _|  / ____| (_)    | |       
  | ' / _ _ __   __ _    ___ | |_  | |    | |_  ___| | _____ 
