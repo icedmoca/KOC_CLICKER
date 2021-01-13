@@ -26,7 +26,3 @@ cd /bin
 sudo chmod +x chromedriver
 cd ~/clickinstaller
 python3 1.py
-sleep 5
-python3 1.py
-sleep 5
-python3 1.py
