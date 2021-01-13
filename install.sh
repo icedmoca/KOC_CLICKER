@@ -14,7 +14,7 @@ _  ___                      __    _____ _ _      _
 -------------------------------------------------------------
 EOF
 
-apt-get update --fix-missing
+sudo apt-get update --fix-missing
 sudo apt-get install -y libappindicator1 fonts-liberation
 sudo apt-get install -f
 sudo apt-get install google-chrome-stable
