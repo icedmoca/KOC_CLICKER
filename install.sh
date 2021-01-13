@@ -25,8 +25,8 @@ pip3 install chromedriver-py
 cd /bin
 sudo chmod +x chromedriver
 cd ~/clickinstaller
-nohup python3 1.py &
+python3 1.py
 sleep 5
-nohup python3 1.py &
+python3 1.py
 sleep 5
-nohup python3 1.py &
+python3 1.py
