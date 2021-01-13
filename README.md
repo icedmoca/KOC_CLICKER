@@ -12,4 +12,4 @@ This is a simple install script for the instant clicker for the King of Clicks c
 ### To exit script
 `CTRL-C` and end all python processes `sudo pkill python` make sure none are running `sudo pgrep python`
 
-######Dependencies installed
+###### Dependencies installed
