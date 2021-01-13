@@ -11,9 +11,13 @@ _  ___                      __    _____ _ _      _
 EOF
 
 apt-get update --fix-missing
+sudo apt-get install -y libappindicator1 fonts-liberation
+sudo apt-get install -f
 apt-get install google-chrome-stable
 apt install -y python3
 apt install -y python3-pip
 apt install -y python3-selenium
 pip3 install chromedriver-py
+cd /bin
+chmod +x chromedriver
 python3 1.py
