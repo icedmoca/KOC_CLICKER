@@ -32,7 +32,8 @@ def makeClickerInstance():
         }
         chrome_options = Options()
         chrome_options.add_argument('--headless')
-        driver = webdriver.Chrome(executable_path=r'chromedriver\chromedriver.exe', seleniumwire_options=options, options=chrome_options)
+        chrome_options.add_argument('--no-sandbox')
+        driver = webdriver.Chrome(seleniumwire_options=options, options=chrome_options)
         driver.get('https://kingoftheclicks.com/?ref=epicgamer')
         time.sleep(6)
         start = driver.find_element_by_xpath('/html/body/div[1]/div/div/main/div[3]/div[2]/div/div/div/footer/button[1]/span')
@@ -54,10 +55,9 @@ def makeClickerInstance():
                     pass
         driver.quit()
     #except:
-        #print('DRIVER CRASHED RETRYING')
-makeClickerInstance()
-'''
+
+
 while 1 == 1:
     makeClickerInstance()
     print('RESTARTING')
-'''
+
