@@ -22,5 +22,7 @@ sudo apt install -y python3
 sudo apt install -y python3-pip
 sudo apt install -y python3-selenium
 pip3 install chromedriver-py
+pip3 install mitmproxy
+pip3 install selenium-wire
 cd /bin
 sudo chmod +x chromedriver
