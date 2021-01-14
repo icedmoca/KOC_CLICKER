@@ -26,7 +26,6 @@ def interceptor(request):
     except:
         pass
 def makeClickerInstance():
-    #try:
         options = {
         'backend': 'mitmproxy'
         }
