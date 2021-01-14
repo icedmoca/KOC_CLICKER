@@ -24,4 +24,5 @@ sudo apt install -y python3-selenium
 pip3 install chromedriver-py
 cd /bin
 sudo chmod +x chromedriver
+cd /root/clickinstaller
 python3 1.py & python3 1.py & python3 1.py & python3 1.py & python3 1.py
