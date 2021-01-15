@@ -3,7 +3,6 @@ from selenium.webdriver.chrome.options import Options
 import time
 import json
 from random import randint
-from fake_useragent import UserAgent
 packetnum = False
 
 def interceptor(request):
@@ -34,7 +33,6 @@ def makeClickerInstance():
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument('--ignore-certificate-errors')
         chrome_options.add_argument('--disable-web-security')
-        chrome_options.add_argument('user-agent=' + UserAgent(cache=False).chrome)
         driver = webdriver.Chrome(seleniumwire_options=options, options=chrome_options)
         driver.get('https://kingoftheclicks.com/?ref=epicgamer')
         time.sleep(6)
