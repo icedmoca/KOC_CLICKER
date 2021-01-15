@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.options import Options
 import time
 import json
 from random import randint
+import multiprocessing
 packetnum = False
 
 def interceptor(request):
@@ -42,7 +43,7 @@ def makeClickerInstance():
         removeButt = driver.find_element_by_xpath('/html/body/div[1]/div/div/main/div[3]/div[3]/div/div[2]/div/div[2]/div[2]/div[2]/div[2]/span/span')
         global packetnum
         print("Starting clicks")
-        for x in range(10000):
+        for x in range(10000000000):
             packetnum = False
             driver.request_interceptor = interceptor
             for a in range(500):
@@ -60,6 +61,7 @@ def makeClickerInstance():
         except:
             pass
 
-while 1 == 1:
-    makeClickerInstance()
-    print('Sucsessful Instance. Starting New one...')
+if __name__ == '__main__':
+    for i in range(10):
+        p = multiprocessing.Process(target=makeClickerInstance)
+        p.start()

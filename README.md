@@ -24,8 +24,7 @@ _12 instances = `4`cpu `6gb`ram_
 Run multiple: `python3 1.py & python3 1.py & python3 1.py`
 
 ## Install on server:
-1. `git clone https://github.com/icedmoca/clickinstaller.git && cd clickinstaller && chmod 777 install.sh && ./install.sh`
-2. `cd clickinstaller & python3 1.py & python3 1.py & python3 1.py & python3 1.py & python3 1.py & python3 1.py`
+1. `git clone https://github.com/icedmoca/clickinstaller.git && cd clickinstaller && chmod 777 install.sh && ./install.sh && cd clickinstaller && python3 1.py`
 
 ### To exit script
 `CTRL+C` and end all python processes `sudo pkill python` make sure none are running `sudo pgrep python`
