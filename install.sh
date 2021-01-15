@@ -24,6 +24,4 @@ sudo apt install -y python3-selenium
 pip3 install chromedriver-py
 pip3 install selenium-wire
 pip3 install mitmproxy
-cd /bin
-sudo chmod +x chromedriver
-mv 1.py ..
+cd /bin & sudo chmod +x chromedriver
