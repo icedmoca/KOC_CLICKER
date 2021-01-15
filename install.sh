@@ -24,3 +24,4 @@ sudo apt install -y python3-selenium
 pip3 install chromedriver-py
 pip3 install selenium-wire
 pip3 install mitmproxy
+echo "Script installed"
