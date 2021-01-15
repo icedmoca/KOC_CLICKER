@@ -26,4 +26,4 @@ pip3 install selenium-wire
 pip3 install mitmproxy
 cd /bin
 sudo chmod +x chromedriver
-mv 1.py clickinstaller/..
+mv 1.py ..
