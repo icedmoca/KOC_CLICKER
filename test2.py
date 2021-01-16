@@ -20,9 +20,8 @@ def makeClickerInstance():
         global packetnum
         print("Starting clicks")
         while 1 == 1:
-            for a in range(500):
-                removeButt.click()
-            time.sleep(1)
+            removeButt.click()
+            time.sleep(0.01)
     except:
       pass
 
