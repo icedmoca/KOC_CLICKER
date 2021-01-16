@@ -11,7 +11,7 @@ def makeClickerInstance():
         chrome_options.add_argument('--ignore-certificate-errors')
         chrome_options.add_argument('--disable-web-security')
         driver = webdriver.Chrome(options=chrome_options)
-        driver.get('https://kingoftheclicks.com/?ref=zodicalpeak')
+        driver.get('https://kingoftheclicks.com/?ref=epicgamer')
         time.sleep(3)
         start = driver.find_element_by_xpath('/html/body/div[1]/div/div/main/div[3]/div[2]/div/div/div/footer/button[1]/span')
         start.click()
