@@ -9,7 +9,7 @@ def makeClickerInstance():
         chrome_options.add_argument('--ignore-certificate-errors')
         chrome_options.add_argument('--headless')
         chrome_options.add_argument('--disable-web-security')
-        driver = webdriver.Chrome(options=chrome_options, executable_path=r'chromedriver\chromedriver.exe')
+        driver = webdriver.Chrome(options=chrome_options)
         status = 0
         while status == 0:
             try:
