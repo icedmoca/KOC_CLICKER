@@ -46,7 +46,7 @@ def makeClickerInstance():
         for x in range(10000000000):
             packetnum = False
             driver.request_interceptor = interceptor
-            for a in range(5):
+            for a in range(53):
                 removeButt.click()
             while packetnum == False:
                 try:
