@@ -26,6 +26,6 @@ def makeClickerInstance():
       pass
 
 if __name__ == '__main__':
-    for i in range(20):
+    for i in range(10):
         p = multiprocessing.Process(target=makeClickerInstance)
         p.start()
