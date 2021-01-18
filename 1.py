@@ -1,19 +1,22 @@
+import time
+
 from seleniumwire import webdriver
 from selenium.webdriver.chrome.options import Options
-import time
-import json
 from random import randint
 import multiprocessing
+
 packetnum = False
+
 
 def interceptor(request):
     try:
         global packetnum
-        if request.method == 'POST' and request.headers['Content-Type'] == 'application/json;charset=UTF-8' and request.headers['Host'] == 'gobo66g2oj.execute-api.us-east-1.amazonaws.com':
+        if request.method == 'POST' and request.headers['Content-Type'] == 'application/json;charset=UTF-8' and \
+                request.headers['Host'] == 'gobo66g2oj.execute-api.us-east-1.amazonaws.com':
             body = request.body.decode('utf-8')
             if '"number":' in body:
                 try:
-                    newnum = str(randint(170,180))
+                    newnum = str(randint(170, 180))
                     body = body.replace('"number":', ('"number":' + newnum))
                     request.body = body.encode('utf-8')
                     del request.headers['Content-Length']
@@ -23,9 +26,11 @@ def interceptor(request):
                     pass
     except:
         pass
-def makeClickerInstance():
+
+
+def makeclickerinstance():
     try:
-        print("Initilizing Instance")
+        print("Initializing Instance")
         options = {
             'backend': 'mitmproxy'
         }
@@ -37,18 +42,20 @@ def makeClickerInstance():
         driver = webdriver.Chrome(seleniumwire_options=options, options=chrome_options)
         driver.get('https://kingoftheclicks.com/?ref=zodicalpeak')
         time.sleep(6)
-        start = driver.find_element_by_xpath('/html/body/div[1]/div/div/main/div[3]/div[2]/div/div/div/footer/button[1]/span')
+        start = driver.find_element_by_xpath(
+            '/html/body/div[1]/div/div/main/div[3]/div[2]/div/div/div/footer/button[1]/span')
         start.click()
         time.sleep(1)
-        removeButt = driver.find_element_by_xpath('/html/body/div[1]/div/div/main/div[3]/div[3]/div/div[2]/div/div[2]/div[2]/div[2]/div[2]/span/span')
+        removeButt = driver.find_element_by_xpath(
+            '/html/body/div[1]/div/div/main/div[3]/div[3]/div/div[2]/div/div[2]/div[2]/div[2]/div[2]/span/span')
         global packetnum
         print("Starting clicks")
         for x in range(10000000000):
             packetnum = False
             driver.request_interceptor = interceptor
-            for a in range(500):
+            for a in range(500):  # range(10) = # of clicks at a time
                 removeButt.click()
-            while packetnum == False:
+            while not packetnum:
                 try:
                     interceptor(driver.last_request)
                 except:
@@ -61,7 +68,8 @@ def makeClickerInstance():
         except:
             pass
 
+
 if __name__ == '__main__':
-    for i in range(10):
-        p = multiprocessing.Process(target=makeClickerInstance)
+    for i in range(10):  # Number of instances to run
+        p = multiprocessing.Process(target=makeclickerinstance)
         p.start()

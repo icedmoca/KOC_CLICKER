@@ -4,18 +4,18 @@ This is a simple install script for the instant clicker for the KOC competition.
 
 ### System requirements
 __CPU: `2` MEMORY: `4gb`__ 
-Tested on ubuntu 20.04 (Recommended)
+Tested on ubuntu 20.04
 
 _10 instances = `2`cpu `4gb`ram_
 
-_Python Multiprocessing = `10`_
+_Multiprocessing = `10`_
 
 
 
 ## How to install:
 
-1. `git clone https://github.com/icedmoca/clickinstaller.git && cd clickinstaller && chmod 777 install.sh && ./install.sh`
-2. `cd clickinstaller && python3 1.py`
+1. Install `git clone https://github.com/icedmoca/clickinstaller.git && cd clickinstaller && chmod 777 install.sh && ./install.sh`
+2. Run`cd clickinstaller && python3 1.py`
 
 ###### Dependencies installed
  * python3
