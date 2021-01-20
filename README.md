@@ -25,4 +25,4 @@ _Multiprocessing = `10`_
  * python3-mitmproxy
  * chromedriver-py
  * libappindicator1 
- * fonts-liberation
+ * fonts-liberation lol
