@@ -14,8 +14,8 @@ _Multiprocessing = `10`_
 
 ## How to install:
 
-1. Install `git clone https://github.com/icedmoca/KOC_CLICKER/serverclicker.git && cd serverclicker && chmod 777 install.sh && ./install.sh`
-2. Run`cd serverclicker && python3 1.py`
+1. Install `git clone https://github.com/icedmoca/KOC_CLICKER.git && cd KOC_CLICKER/serverclicker && chmod 777 install.sh && ./install.sh`
+2. Run`cd KOC_CLICKER/serverclicker && python3 1.py`
 
 ###### Dependencies installed
  * python3
