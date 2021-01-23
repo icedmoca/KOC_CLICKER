@@ -14,8 +14,8 @@ _Multiprocessing = `10`_
 
 ## How to install:
 
-1. Install `git clone https://github.com/icedmoca/clickinstaller.git && cd clickinstaller && chmod 777 install.sh && ./install.sh`
-2. Run`cd clickinstaller && python3 1.py`
+1. Install `git clone https://github.com/icedmoca/KOC_CLICKER.git && cd KOC_CLICKER && chmod 777 install.sh && ./install.sh`
+2. Run`cd KOC_CLICKER && python3 1.py`
 
 ###### Dependencies installed
  * python3
