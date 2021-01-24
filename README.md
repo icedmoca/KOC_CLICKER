@@ -8,7 +8,6 @@ Tested on ubuntu 20.04
 
 _10 instances = `2`cpu `4gb`ram_
 
-_Multiprocessing = `10`_
 
 
 
