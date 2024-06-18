@@ -1,5 +1,7 @@
 #!/bin/bash
-sudo bash -c 'cat > /etc/motd' <<-'EOF'
+
+# Update Message of the Day (MOTD)
+sudo tee /etc/motd > /dev/null <<-'EOF'
 _  ___                      __    _____ _ _      _        
  | |/ (_)                    / _|  / ____| (_)    | |       
  | ' / _ _ __   __ _    ___ | |_  | |    | |_  ___| | _____ 
@@ -14,14 +16,13 @@ _  ___                      __    _____ _ _      _
 -------------------------------------------------------------
 EOF
 
+# Update and install necessary packages
 sudo apt-get update --fix-missing
 sudo apt-get install -y libappindicator1 fonts-liberation
 sudo apt-get install -f
-sudo apt-get install google-chrome-stable
-sudo apt install -y python3
-sudo apt install -y python3-pip
-sudo apt install -y python3-selenium
-pip3 install chromedriver-py
-pip3 install selenium-wire
-pip3 install mitmproxy
+sudo apt-get install -y google-chrome-stable python3 python3-pip python3-selenium
+
+# Install Python packages
+pip3 install chromedriver-py selenium-wire mitmproxy
+
 echo "Script installed"
